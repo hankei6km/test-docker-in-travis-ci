@@ -1,0 +1,20 @@
+sudo: required
+
+language: python
+
+python:
+  - 3.6
+
+services:
+  - docker
+
+before_install:
+  - bash bench_test/before_isntall.sh
+
+install:
+  - pip install pytest
+  - pip install pytest-asyncio
+  - pip install aiohttp
+
+script:
+  - bash bench_test/script.sh
