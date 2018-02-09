@@ -10,7 +10,7 @@ Travis CI で Docker コンテナを使ってみるテストのリポジトリ.
 ### flying-tent-api
 
 [hankei6km/test-travis-ci](https://github.com/hankei6km/test-travis-ci)の `flying_tent` パッケージを流用した API サーバー的なコンテナイメージ(を作成するための Dockerfile と、[python:3-alpine](https://hub.docker.com/_/python/)と[aiohttp](https://aiohttp.readthedocs.io/en/stable/) によるサーバースクリプト).
-イメージは Docker HUB 上に作成される.
+Docker HUB 上に[hankei6km/test-docker-in-travis-ci](https://hub.docker.com/r/hankei6km/test-docker-in-travis-ci/)として登録してある.
 
 
 ## License
