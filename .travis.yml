@@ -11,5 +11,9 @@ services:
 before_install:
   - bash bench_test/before_isntall.sh
 
+# customize test script by enviroment vars.
+# env:
+#   - REF_RESULT: "テントって飛ぶの？"
+
 script:
   - bash bench_test/script.sh
