@@ -5,9 +5,6 @@
 
 set -e
 
-: ${IMAGE_NAME:="hankei6km/test-docker-in-travis-ci"}
-: ${IMAGE_TAG:="latest"}
-: ${CONTAINER_NAME:="flying-tent-api"}
-: ${REF_RESULT:=""}
+. ./bench_test/set_env.sh
 
 docker run --rm -d --name "${CONTAINER_NAME}" --hostname "${CONTAINER_NAME}" "${IMAGE_NAME}:${IMAGE_TAG}" /bin/sh -c "cd /opt ; python -m flying_tent_api"

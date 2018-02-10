@@ -5,10 +5,7 @@
 
 set -e
 
-: ${IMAGE_NAME:="hankei6km/test-docker-in-travis-ci"}
-: ${IMAGE_TAG:="latest"}
-: ${CONTAINER_NAME:="flying-tent-api"}
-: ${REF_RESULT:=""}
+. ./bench_test/set_env.sh
 
 # https://stackoverflow.com/questions/17157721/how-to-get-a-docker-containers-ip-address-from-the-host
 export CONTAINER_ADDR="$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' ${CONTAINER_NAME})"
